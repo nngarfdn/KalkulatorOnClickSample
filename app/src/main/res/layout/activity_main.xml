@@ -11,34 +11,35 @@
         android:id="@+id/hasil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
+        android:id="@+id/btn_one"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="1"
-        android:onClick="InputNilai"
+        android:onClick="inputNilai"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="2"
-        android:onClick="InputNilai"
+        android:onClick="inputNilai"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="3"
-        android:onClick="InputNilai"
+        android:text="-"
+        android:onClick="inputNilai"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="+"
-        android:onClick="InputNilai"
+        android:onClick="inputNilai"
         />
 
 </LinearLayout>

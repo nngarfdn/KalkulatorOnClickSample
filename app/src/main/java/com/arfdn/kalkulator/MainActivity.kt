@@ -5,31 +5,39 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import com.arfdn.kalkulator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private val binding by lazy{ ActivityMainBinding.inflate(layoutInflater)}
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
+        binding.btnOne.setOnClickListener {
+            //todo: action button one
+        }
     }
 
-    fun InputNilai(view: View) {
-        when((view as Button).text.toString()){
-            "+"-> { findViewById<TextView>(R.id.hasil).text = "Halo"
-            }
-            "-"-> {
-//                todo: tambahkan fungsi pengurangan
-            }
-            "x"-> {
+    fun inputNilai(view: View) {
+        with(binding){
+            when((view as Button).text.toString()){
+                "+"-> {
+                    hasil.text = "plus "
+                }
+                "-"-> {
+                    hasil.text = "minus "
+                }
+                "x"-> {
 //                 todo: tambahkan fungsi perkalian
-            }
-            "/"-> {
+                }
+                "/"-> {
 //                todo: tambahkan fungsi pembagian
-            }
-            else->{
-                findViewById<TextView>(R.id.hasil).text =
-                    findViewById<TextView>(R.id.hasil).text.toString()+(view as Button).text.toString()
-
+                }
+                else->{
+                    hasil.text = "tidak ada "
+                }
             }
         }
+
     }
 }
